@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Draft</title>
+</head>
+<body>
+    <h1>
+        {{dv}}
+    </h1>
+    {% for musical_set in musical_sets %}
+     <time>
+         {{musical_set['time']}}
+     </time>
+     <h1>
+         <font size="5">
+             {{musical_set['head']}}
+         </font>
+     </h1>
+     <p>
+         {{musical_set['body']}}
+     </p>
+    {% endfor %}
+</body>
+</html>
