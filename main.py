@@ -7,20 +7,24 @@ app = Flask(__name__)
 def index():
     draft_variable = 'I want to listen to this music forever!'
     musical_sets = [{'time': '11.07.23',
-                  'head': 'TRANSATLANTIC',
-                  'body': 'Feminism'
-                  },
+                     'head': 'TRANSATLANTIC',
+                     'body': 'Feminism',
+                     'file': 'audio/amorsatyr.mp3',
+                     },
                     {'time': '12.07.23',
                      'head': 'TRANS',
-                     'body': 'Fusion'
+                     'body': 'Fusion',
+                     'file': 'audio/laparole.mp3',
                      },
                     {'time': '13.07.23',
                      'head': 'TRANSMOTION',
-                     'body': 'Fem'
+                     'body': 'Fem',
+                     'file': 'audio/money.mp3',
                      },
                     {'time': '14.07.23',
                      'head': 'TEHNO',
-                     'body': 'Freejazz'
+                     'body': 'Freejazz',
+                     'file': 'audio/umamami.mp3',
                      }]
     return render_template('index.html', dv=draft_variable, musical_sets=musical_sets)
 

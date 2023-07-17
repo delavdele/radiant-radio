@@ -12,7 +12,9 @@
      <time>
          {{musical_set['time']}}
      </time>
-     <button onclick="console.log('Hello Campers')">PLAY</button>
+     <audio controls>
+         <source src="{{url_for('static', filename=musical_set['file'])}}" type="audio/mpeg">
+     </audio>
      <h1>
          <font size="5">
              {{musical_set['head']}}
