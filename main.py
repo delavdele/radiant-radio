@@ -26,7 +26,7 @@ def index():
                      'body': 'Freejazz',
                      'file': 'audio/umamami.mp3',
                      }]
-    return render_template('index.html', dv=draft_variable, musical_sets=musical_sets)
+    return render_template('index.html', title=draft_variable, musical_sets=musical_sets)
 
 
 if __name__ == '__main__':

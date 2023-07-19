@@ -10,22 +10,22 @@ body {
     <title>Draft</title>
 </head>
 <body>
-    <h1>
-        {{dv}}
+    <h1 style="color: skyblue">
+        {{title}}
     </h1>
     {% for musical_set in musical_sets %}
-     <time>
+     <time style="color: lightyellow">
          {{musical_set['time']}}
      </time>
      <audio controls>
          <source src="{{url_for('static', filename=musical_set['file'])}}" type="audio/mpeg">
      </audio>
-     <h1>
+     <h1 style="color: brown">
          <font size="5">
              {{musical_set['head']}}
          </font>
      </h1>
-     <p>
+     <p style="color: white">
          {{musical_set['body']}}
      </p>
     {% endfor %}
