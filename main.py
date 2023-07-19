@@ -9,7 +9,7 @@ def index():
     musical_sets = [{'time': '11.07.23',
                      'head': 'TRANSATLANTIC',
                      'body': 'Feminism',
-                     'file': 'audio/amorsatyr.mp3',
+                     'file': 'audio/amorsatyr.mp3'
                      },
                     {'time': '12.07.23',
                      'head': 'TRANS',
