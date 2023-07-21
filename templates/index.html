@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+.container {
+  display: flex;
+}
+
+.box {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid black;
+}
 body {
   background-image: url({{url_for('static', filename='images/background.jpg')}});
 }
@@ -14,25 +23,37 @@ body {
         {{title}}
     </h1>
     {% for musical_set in musical_sets %}
-    <img src={{url_for('static', filename=musical_set['image'])}} alt="Flowers in Chania"
-    width="400"
-    height="300"
-    >
-    <time style="color: lightyellow">
-         {{musical_set['time']}}
-     </time>
-     <audio controls>
-         <source src="{{url_for('static', filename=musical_set['file'])}}" type="audio/mpeg">
-     </audio>
+    <div class="container">
+
+        <div class="box">
+            <img src={{url_for('static', filename=musical_set['image'])}} alt="Flowers in Chania"
+                 width="400"
+                 height="300"
+                 style="float: left;"
+            >
+        </d>
+
+        <div class="box">
+            <time style="color: lightyellow">
+                {{musical_set['time']}}
+            </time>
+
+            <audio controls>
+                <source src="{{url_for('static', filename=musical_set['file'])}}" type="audio/mpeg">
+            </audio>
+
      <h1 style="color: brown">
          <font size="5">
              {{musical_set['head']}}
          </font>
      </h1>
+
      <p style="color: white">
          {{musical_set['body']}}
      </p>
+         </div>
     <hr>
+    </div>
     {% endfor %}
 </body>
 </html>
