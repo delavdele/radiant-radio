@@ -14,7 +14,11 @@ body {
         {{title}}
     </h1>
     {% for musical_set in musical_sets %}
-     <time style="color: lightyellow">
+    <img src={{url_for('static', filename=musical_set['image'])}} alt="Flowers in Chania"
+    width="400"
+    height="300"
+    >
+    <time style="color: lightyellow">
          {{musical_set['time']}}
      </time>
      <audio controls>
